@@ -8,6 +8,7 @@
 // set up constants
 const int pin_red = 13;     // set up pin values for easier reference in code
 const int pin_green = 12;
+uint32_t timeNow = 0;       // create an unsigned long to hold millis time
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -18,30 +19,24 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  /*
-  Program uses delays to hold Writes for certain chunks of time, alternating
-   when each pin is written HIGH vs. LOW results in different periods
-  */
-  digitalWrite(pin_red, HIGH);  // turn the LED off (LOW is the voltage level)
-  digitalWrite(pin_green, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(500);                      // wait for a half a second / hold these settings for half a second
-  digitalWrite(pin_red, LOW); 
-  digitalWrite(pin_green, HIGH);  
-  delay(500);
-  digitalWrite(pin_red, LOW); 
-  digitalWrite(pin_green, LOW); 
-  delay(500);
-  digitalWrite(pin_red, HIGH); 
-  digitalWrite(pin_green, LOW); 
-  delay(500);
-  digitalWrite(pin_red, HIGH); 
-  digitalWrite(pin_green, HIGH); 
-  delay(500);                  
-  digitalWrite(pin_red, LOW); 
-  digitalWrite(pin_green, HIGH);  
-  delay(500);
-  digitalWrite(pin_red, LOW); 
-  digitalWrite(pin_green, LOW); 
-  delay(500);
+    timeNow = millis();
+
+    // code for RED LED (holds on every 750 ms)
+    if(timeNow%750 == 0){ // keep on for 1/2 of period
+         digitalWrite(pin_red, HIGH);  // turn the LED off (LOW is the voltage level)
+    }
+    else if(timeNow%(750*2) == 0){ // turn off for other 1/2
+        digitalWrite(pin_red, LOW);  // turn the LED on (HIGH is the voltage level)
+
+    }
+
+    // code for GREEN LED (holds on every 350 ms)
+    if(timeNow%350 == 0){
+         digitalWrite(pin_green, HIGH);
+    }
+    else if(timeNow%(350*2) == 0){
+        digitalWrite(pin_green, LOW);  
+    }
+  
 }
 
