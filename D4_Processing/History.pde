@@ -9,26 +9,34 @@
 import processing.serial.*;
 
 Serial myPort;
-float h;
 
 void setup(){
     size(400,400); // sets window size
     myPort = new Serial(this, "COM0", 9600); // use your own port
 
     myPort.bufferUntil('\n'); // only start running after input
+
+    // settings for point
+    strokeWeight(10);
+    stroke(255,0,0);
+    background(255);
 }
 
+int xpos = 0;
+float y;
 void draw(){
-    background(255);// sets bg
-    fill(0); // make shapes the color 0
-    rect(0,h, 10, 50); //makes rectangle with upper left at (0,h)
-
+    point(xpos, y);
+    if(xpos > 1000){
+        xpos = 0;
+        background(255);
+    }
+    xpos += 1;
 }
 
 void serialEvent(Serial port){
     String inputString = port.readStringUntil('\n'); // reads every line separately
     println(inputString); // prints to console
     float temp = float(inputString);
-    h = map(temp, 0, 1023, 0, 255); // scales values from 0-1023 to 0-255
-    println("height: ", brightness); // prints to console
+    y = map(temp, 0, 1023, 0, 255); // scales values from 0-1023 to 0-255
+    println("ypos: ", y); // prints to console
 }
