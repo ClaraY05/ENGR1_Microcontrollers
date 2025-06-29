@@ -1,7 +1,7 @@
 /*
   UCLA Engineering Design Summer Institute 2025 - Microcontrollers
   Clara Yee
-  ForLoops.ino // slide 45
+  ThermistorVoltageDiv.ino // slide 45
 
   Make a voltage divider with R1 = 10k and R2 = Rtherm and write a program to read Vout and print it to the serial monitor
 With the formulas you used previously, use Vout to find Rth, and use Rth to find the temperature in Celsius. 
