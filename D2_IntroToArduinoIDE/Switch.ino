@@ -1,9 +1,7 @@
 /*
-  Adapted Blink Code from
-  https://docs.arduino.cc/hardware/
-
-  Adjusted for UCLA Engineering Design Summer Institute 2025 - Microcontrollers
+  UCLA Engineering Design Summer Institute 2025 - Microcontrollers
   Clara Yee
+  Switch.ino
 */
 // set up constants
 const int pin_red = 13;     // set up pin values for easier reference in code
@@ -31,7 +29,6 @@ void loop() {
     }
 
     // code for GREEN LED (holds on every 350 ms)
-    // can also do digitalWrite(pin_green, !(digitalRead(pin_green)));
     if(timeNow%350 == 0){
          digitalWrite(pin_green, HIGH);
     }
