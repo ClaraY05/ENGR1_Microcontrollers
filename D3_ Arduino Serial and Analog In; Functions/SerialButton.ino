@@ -2,6 +2,9 @@
   UCLA Engineering Design Summer Institute 2025 - Microcontrollers
   Clara Yee
   ForLoops.ino // slide 15
+
+  Connect a button to one of the digital input pins on your Arduino
+  Write a program that prints the button state over Serial
 */
 
 const int pin_in = 13;
