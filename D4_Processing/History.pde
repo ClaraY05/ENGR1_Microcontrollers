@@ -1,9 +1,9 @@
 /*
   UCLA Engineering Design Summer Institute 2025 - Microcontrollers
   Clara Yee
-  Shapes.pde
+  History.pde
 
-  Code changes height of rectangle based on output of arduino analog read
+  Code changes plots points of analog read at a time based on output of arduino analog read
 */
 
 import processing.serial.*;
