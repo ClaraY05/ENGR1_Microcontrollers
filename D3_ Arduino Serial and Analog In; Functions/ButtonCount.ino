@@ -17,8 +17,9 @@ void setup(){
 }
 
 void loop(){
-    if(!digital){
+    if(!digitaRead(pin_in)){ // tracks when button is pressed
+        counter += 1;
         delay(300);
     }
-    Serial.println(counter);
+    Serial.println(counter); // prints out to serial
 }
