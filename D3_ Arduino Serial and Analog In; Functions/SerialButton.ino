@@ -16,12 +16,12 @@ void setup(){
 }
 
 void loop(){
-    if(!pin_in){
+    if(!digitalRead(pin_in)){
         isOn = true; // flips every time it is pressed and not pressed
         Serial.println("ON!");
         delay(10);   // account for button delays
     }
-    if else((isOn == true)&&(pin_in)){
+    if else((isOn == true)&&(digitalRead(pin_in))){
         isOn = false;
         Serial.println("OFF!");
     }
