@@ -11,10 +11,7 @@ Look at the numbers on the Serial Monitor as well as the Serial Plotter.
 
 */
 
-float Vout = 0.0;
 const float R1 = 20000.0;
-float Rtherm = 0;
-float tempKelvin = 0;
 float tempCelcius = 0;
 
 const int pin_in = 13;
@@ -24,10 +21,16 @@ void setup(){
 }
 
 void loop(){
-    Vout = digitalRead(pin_in)*(5.0/1024.0);
-    Rtherm = (Vout*R1)/(5.0-Vout);
-    tempKelvin = 1.0/((1.0/298.0)+(1.0/3950.0)*log(Rtherm/10000.0));
-    tempCelcius = tempKelvin - 273;
+    tempCelcius = getTemperature(digitalRead(pin_in));
+    
 
     Serial.println("TEMP(C): "+String(tempCelcius));
+}
+
+float getTemperature(int Vout_adc){
+    float Vout = Vout_adc*(5.0/1024.0);
+    float Rtherm = (Vout*R1)/(5.0-Vout);
+    float tempKelvin = 1.0/((1.0/298.0)+(1.0/3950.0)*log(Rtherm/10000.0));
+
+    return tempKelvin - 273;
 }
