@@ -25,7 +25,7 @@ void setup(){
 }
 
 void loop(){
-    tempCelcius = getTemperature(digitalRead(pin_in));
+    tempCelcius = getTemperature(analogRead(pin_in));
     Serial.println("TEMP(C): "+String(tempCelcius));
 
     lightIfOver(tempCelcius);

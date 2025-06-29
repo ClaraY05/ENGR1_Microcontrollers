@@ -21,7 +21,7 @@ void setup(){
 }
 
 void loop(){
-    Vout = digitalRead(pin_in)*(5.0/1024.0);
+    Vout = analogRead(pin_in)*(5.0/1024.0);
     R2 = (Vout*R1)/(5.0-Vout);
     Serial.println("VOLTAGE: "+String(Vout)+", RESISTANCE: "+String(R2));
 }
