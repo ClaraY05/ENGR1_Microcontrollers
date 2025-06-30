@@ -5,6 +5,7 @@
 
   Code changes plots points of analog read at a time based on output of arduino analog read
   screen scrolls with plotting using an array to store values and shift values
+  Uses a ring buffer.
 */
 
 import processing.serial.*;
@@ -24,13 +25,14 @@ void setup(){
 
 float[] data = new float[1000];
 float y;
+int count = 0;
 void draw(){
     background(255);
-    data[1000-1] = y;
-    for(int i = 0; i < 1000 - 1; i++){
-        point(i, data[i]);
-        data[i] = data[i+1];
+    data[count%1000] = y;
+    for(int i = 0; i < 1000; i++){
+        point(i, data[(i+count+1)%1000]);
     }
+    count ++;
 }
 
 void serialEvent(Serial port){
