@@ -1,7 +1,7 @@
 # ENGR1_Microcontrollers
 
 ## About
-This repository was developed to serve as an accompanying repository for **UCLA's Engineering 1 - Microcontroller's course**. All of the curriculumn / content was based off of the curriculumn developed by [Professor Jacob Schmidt](https://samueli.ucla.edu/people/jacob-schmidt/), and additional adapted by myself (ENGR1 Microcontrollers Summer 2025 Instructor).
+This repository was developed to serve as an accompanying repository for **UCLA's Engineering 1 - Microcontroller's course**. All of the curriculumn / content was based off of the curriculumn developed by [Professor Jacob Schmidt](https://samueli.ucla.edu/people/jacob-schmidt/), and additionally adapted by myself (ENGR1 Microcontrollers Summer 2025 Instructor).
 
 ENGR1 Microcontrollers functions similarly to a more traditional course compared to the typical ENGR1 style, with lectures covering specific topics related to microcontrollers and projects to practice application of these skills. After completing this course a student should be able to identify and complete the steps required to independently develop complex projects involving microcontrollers.As always, meaningful learning comes from an honest commitment to the process. For this reason, it is strongly recommended that you complete the activities independently before reviewing the answers.
 
