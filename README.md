@@ -5,6 +5,8 @@ This repository was developed to serve as an accompanying repository for **UCLA'
 
 ENGR1 Microcontrollers functions similarly to a more traditional course compared to the typical ENGR1 style, with lectures covering specific topics related to microcontrollers and projects to practice application of these skills. After completing this course a student should be able to identify and complete the steps required to independently develop complex projects involving microcontrollers.As always, meaningful learning comes from an honest commitment to the process. For this reason, it is strongly recommended that you complete the activities independently before reviewing the answers.
 
+This course is designed for a complete beginner, though experience with physics, digital logic, and programming will be very helpful.
+
 This coursework was developed with a 3 week full-time schedule in mind. Content adapted for the typical 10 week quarter may be missing some information explained in this repository.
 
 ## Content
