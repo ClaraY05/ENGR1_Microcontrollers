@@ -30,4 +30,4 @@ This coursework was developed with a 3 week full-time schedule in mind. Content 
 
 -> [Get Started](./W1_Intro_to_Circuits_and_Arduino/WEEK1.md)
 
-*LAST UPDATED: January 4nd, 2026*
+*LAST UPDATED: January 5th, 2026*
