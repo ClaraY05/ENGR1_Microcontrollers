@@ -28,4 +28,6 @@ This coursework was developed with a 3 week full-time schedule in mind. Content 
     - I2S Output (Outputting frequencies)
     - Final Project (PROJECT)
 
+-> [Get Started](./W1_Intro_to_Circuits_and_Arduino/WEEK1.md)
+
 *LAST UPDATED: January 4nd, 2026*
