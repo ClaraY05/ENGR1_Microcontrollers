@@ -28,4 +28,4 @@ This coursework was developed with a 3 week full-time schedule in mind. Content 
     - I2S Output (Outputting frequencies)
     - Final Project (PROJECT)
 
-*LAST UPDATED: January 2nd, 2026*
+*LAST UPDATED: January 4nd, 2026*
