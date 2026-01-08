@@ -16,5 +16,6 @@ This week's content is focused on exploring the inner workings of microcontrolle
 - Servo Motors
 - Stepper motor driver A4988 + Stepper motor
 - LIS3DH Breakout Board
+- Adafruit SSD1306
 
 **[Continue to next week](../W3_I2C+I2S/WEEK3.md)**
